@@ -3,6 +3,7 @@ import { client } from './lib/sanity'
 import { Post } from './lib/interface'
 import CustomButton from './components/CustomButton'
 import ServiceSection from './components/hero/ServiceSection'
+import HeroSection from './components/hero/HeroSection'
 
 async function getPosts() {
   const query = `*[_type == "post"]`
@@ -20,12 +21,7 @@ export default async function Home() {
 
   return (
     <main className="min-h-screen bg-black text-slate-200 text-center">
-      {/* <h1 className='text-4xl font-extrabold uppercase text-yellow-500'>Gearhead Garage</h1>
-      <p>Rev Up Your Ride, Restore Your Pride</p>
-      <div className='py-2'>
-        <CustomButton title='Learn more' customCss='bg-red-500'></CustomButton>
-        <CustomButton title='Contact' customCss='bg-red-500'></CustomButton>
-      </div> */}
+      <HeroSection></HeroSection>
       
       <ServiceSection></ServiceSection>
 
