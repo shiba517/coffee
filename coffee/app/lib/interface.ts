@@ -16,3 +16,9 @@ export interface CustomButtonProps {
     customCss?: string;
     handleClick?: MouseEventHandler<HTMLButtonElement>
 }
+
+export interface SubHeaderProps {
+    title?: string;
+    subtitle?: string;
+    customCss?: string;
+}
