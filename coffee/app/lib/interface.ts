@@ -1,3 +1,5 @@
+import { MouseEventHandler } from "react";
+
 export interface Post {
     title: string,
     overview: string,
@@ -7,4 +9,10 @@ export interface Post {
         current: string
     },
     _createdAt: string
+}
+
+export interface CustomButtonProps {
+    title?: string;
+    customCss?: string;
+    handleClick?: MouseEventHandler<HTMLButtonElement>
 }
