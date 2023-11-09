@@ -1,7 +1,5 @@
-import Image from 'next/image'
 import { client } from './lib/sanity'
 import { Post } from './lib/interface'
-import CustomButton from './components/CustomButton'
 import ServiceSection from './components/hero/ServiceSection'
 import HeroSection from './components/hero/HeroSection'
 import BlogsSection from './components/hero/BlogsSection'
@@ -22,12 +20,13 @@ export default async function Home() {
 
   return (
     <main className="min-h-screen bg-black text-slate-200 text-center">
+            <BlogsSection></BlogsSection>
+
 
       <HeroSection></HeroSection>
       
       <ServiceSection></ServiceSection>
 
-      <BlogsSection></BlogsSection>
 
       {/* <h1>Coffee house DEV2</h1>
       <a href="/blogs">Blogs</a>

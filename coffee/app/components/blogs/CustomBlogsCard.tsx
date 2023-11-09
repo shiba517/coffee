@@ -1,8 +1,9 @@
 import Image from 'next/image';
 import React from 'react';
 import CustomButton from '../CustomButton';
+import { CustomBlogsCardProps } from '@/app/lib/interface';
 
-const CustomBlogsCard = () => {
+const CustomBlogsCard = (props: CustomBlogsCardProps) => {
   return (
     <div className=' bg-slate-900'>
         <Image 
@@ -14,8 +15,8 @@ const CustomBlogsCard = () => {
         style={{ width: '100%', height: 'auto' }}
         ></Image>
       <div className='p-2'>
-        <h3 className='font-semibold text-lg text-yellow-400 pb-4'>Blog title</h3>
-        <p className='line-clamp-4 text-sm text-slate-200'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione laboriosam minus voluptas odio officia? Dolorum animi aperiam, necessitatibus voluptates ad voluptas quis facere repellat nemo architecto natus ex doloribus sequi!</p>
+        <h3 className='font-semibold text-lg text-yellow-400 pb-4'>{props.title}</h3>
+        <p className='line-clamp-4 text-sm text-slate-200'>{props.overview}</p>
       </div>
       <div className='py-2 pb-6'>
         <CustomButton title='more' customCss='bg-red-500'></CustomButton>
