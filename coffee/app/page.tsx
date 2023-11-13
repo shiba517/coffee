@@ -4,6 +4,7 @@ import ServiceSection from './components/hero/ServiceSection'
 import HeroSection from './components/hero/HeroSection'
 import BlogsSection from './components/hero/BlogsSection'
 import GallerySection from './components/hero/GallerySection'
+import Footer from './components/Footer'
 
 async function getPosts() {
   const query = `*[_type == "post"]`
@@ -32,6 +33,7 @@ export default async function Home() {
       <ServiceSection></ServiceSection>
       <BlogsSection></BlogsSection>
       <GallerySection data={galleryData.slice(0, 9)}></GallerySection>
+      <Footer></Footer>
     </main>
   )
 }
