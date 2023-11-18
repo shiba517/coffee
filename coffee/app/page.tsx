@@ -4,7 +4,6 @@ import ServiceSection from './components/hero/ServiceSection'
 import HeroSection from './components/hero/HeroSection'
 import BlogsSection from './components/hero/BlogsSection'
 import GallerySection from './components/hero/GallerySection'
-import Footer from './components/Footer'
 
 async function getPosts() {
   const query = `*[_type == "post"]`
@@ -28,12 +27,17 @@ export default async function Home() {
   const galleryData = (await getGallery()) as Gallery[]
 
   return (
-    <main className="min-h-screen bg-black text-slate-200 text-center">
-      <HeroSection></HeroSection>
-      <ServiceSection></ServiceSection>
-      <BlogsSection></BlogsSection>
-      <GallerySection data={galleryData.slice(0, 9)}></GallerySection>
-      <Footer></Footer>
-    </main>
+    // <div className=" bg-black text-slate-200 text-center">
+    //   <HeroSection></HeroSection>
+    //   <ServiceSection></ServiceSection>
+    //   <BlogsSection></BlogsSection>
+    //   <GallerySection data={galleryData.slice(0, 9)}></GallerySection>
+    // </div>
+    <>
+    <HeroSection></HeroSection>
+    <ServiceSection></ServiceSection>
+    <BlogsSection></BlogsSection>
+    <GallerySection data={galleryData.slice(0, 9)}></GallerySection>
+    </>
   )
 }
