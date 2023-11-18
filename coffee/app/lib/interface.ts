@@ -46,6 +46,11 @@ export interface SubHeaderProps {
     customCss?: string;
 }
 
+export interface PageHeaderProps {
+    title?: string;
+    subtitle?: string;
+}
+
 export interface CustomBlogsCardProps {
     title?: string;
     overview?: string;
@@ -53,6 +58,10 @@ export interface CustomBlogsCardProps {
 }
 
 export interface GallerySectionProps {
+    data?: any
+}
+
+export interface BlogSectionProps {
     data?: any
 }
 
