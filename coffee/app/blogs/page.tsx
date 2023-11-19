@@ -20,7 +20,7 @@ const BlogsPage = async () => {
 
       <div className='py-6 grid grid-cols-2 p-4 gap-4'>
         {blogsData.map((blog: Blog) => (
-          <CustomBlogsCard title={blog.title} overview={blog.overview}></CustomBlogsCard>
+          <CustomBlogsCard title={blog.title} overview={blog.overview} _id={blog._id}></CustomBlogsCard>
         ))}
       </div>
     </div>

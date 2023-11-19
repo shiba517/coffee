@@ -8,6 +8,7 @@ import { EmblaCarouselCompProps, Gallery } from '../lib/interface';
 import { PortableText } from '@portabletext/react';
 import Image from 'next/image';
 import { urlFor } from '@/app/lib/sanityImageUrl';
+import PortableTextInsert from './PortableTextInsert';
 
 const EmblaCarouselComp = (props: EmblaCarouselCompProps) => {
   const [emblaRef] = useEmblaCarousel()
@@ -32,10 +33,9 @@ const EmblaCarouselComp = (props: EmblaCarouselCompProps) => {
       <div className="embla__container bg-black text-slate-200">
       {galleryData.map((gallery: Gallery) => (
           <div key={gallery._id} className='embla__slide bg-green-400 text-black overflow-hidden aspect-video'>
-              <PortableText 
+              <PortableTextInsert
               value={gallery.image}
-              components={getDataImageValue}
-              ></PortableText>
+              ></PortableTextInsert>
           </div>
       ))}
       </div>

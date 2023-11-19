@@ -11,6 +11,10 @@ export interface Post {
     _createdAt: string
 }
 
+export interface PortableTextInsertProps {
+    value?: any;
+}
+
 export interface Blog {
     title: string,
     overview: string,
@@ -38,6 +42,7 @@ export interface CustomButtonProps {
     title?: string;
     customCss?: string;
     handleClick?: MouseEventHandler<HTMLButtonElement>
+    href?: string;
 }
 
 export interface SubHeaderProps {
@@ -55,6 +60,8 @@ export interface CustomBlogsCardProps {
     title?: string;
     overview?: string;
     customCss?: string;
+    slug?: string;
+    _id?: string;
 }
 
 export interface GallerySectionProps {
@@ -62,7 +69,8 @@ export interface GallerySectionProps {
 }
 
 export interface BlogSectionProps {
-    data?: any
+    _id?: string;
+    data?: any;
 }
 
 export interface EmblaCarouselCompProps {

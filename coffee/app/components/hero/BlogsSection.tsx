@@ -4,7 +4,6 @@ import React from 'react';
 import SubHeader from '../SubHeader';
 import CustomBlogsCard from '../blogs/CustomBlogsCard';
 import CustomButton from '../CustomButton';
-
 import { client } from '@/app/lib/sanity';
 import { Blog, BlogSectionProps } from '@/app/lib/interface';
 
@@ -23,7 +22,7 @@ const BlogsSection = async (props: BlogSectionProps) => {
       <SubHeader title='Latest news' subtitle='Porro quisquam debitis nemo animi? Voluptates dolore est et quae'></SubHeader>
         <div className='grid grid-cols-2 p-4 gap-4'>
           {blogsData.map((blog: Blog) => (
-            <CustomBlogsCard title={blog.title} overview={blog.overview}></CustomBlogsCard>
+            <CustomBlogsCard title={blog.title} overview={blog.overview} _id={blog._id}></CustomBlogsCard>
           ))}
         </div>
         <div>
