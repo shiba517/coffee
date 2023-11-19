@@ -20,7 +20,7 @@ const BlogPage = async ({params}: any) => {
   const formattedDate = parseISO(blog._createdAt);
 
   return (
-    <div className='px-4 py-14 md:py-4 bg-green-800'>
+    <div className='px-4 py-14'>
       <div>
         <h1 className='text-2xl font-semibold text-yellow-400'>{blog.title}</h1>
         <p>{blog.overview}</p>

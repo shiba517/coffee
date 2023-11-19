@@ -18,7 +18,6 @@ const CustomBlogsCard = (props: CustomBlogsCardProps) => {
         ></Image>
       <div className='p-2'>
         <h3 className='font-semibold text-lg text-yellow-400 pb-4'>{props.title}</h3>
-        <p  className='line-clamp-4 text-sm text-slate-200'>{props._id}</p>
         <p className='line-clamp-4 text-sm text-slate-200'>{props.overview}</p>
       </div>
       <div className='py-2 pb-6'>
