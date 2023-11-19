@@ -13,39 +13,13 @@ import PortableTextInsert from '../PortableTextInsert';
 const GallerySection = async (props: GallerySectionProps) => {
     const galleryData = props.data
 
-    const getDataImageValue = {
-        types: {
-            image: ({value}: {value: any}) => (
-                <Image 
-                alt='random' 
-                src={urlFor(value).url()} 
-                width={0} 
-                height={0}
-                sizes="100%"
-                style={{ height: '100%', width: '100%', margin: 'auto', objectFit: 'none' }}
-                ></Image>
-            )
-        }
-    }
-
     return (
         <div className='bg-slate-950'>
             <SubHeader title='Gallery' subtitle='Excepteur sint occaecat cupidatat non proident, sunt in culpa'></SubHeader>
             
             <div className='grid grid-cols-3 p-4 gap-2'>
                 {galleryData.map((gallery: Gallery) => (
-                    <div key={gallery._id} className='bg-green-400 text-black overflow-hidden'>
-                    </div>
-                ))}
-            </div>
-            
-            <div className='grid grid-cols-3 p-4 gap-2'>
-                {galleryData.map((gallery: Gallery) => (
                     <div key={gallery._id} className='bg-green-400 text-black overflow-hidden aspect-square'>
-                        {/* <PortableText 
-                        value={gallery.image}
-                        components={getDataImageValue}
-                        ></PortableText> */}
                         <PortableTextInsert value={gallery.image}></PortableTextInsert>
                     </div>
                 ))}
