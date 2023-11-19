@@ -13,7 +13,7 @@ const PortableTextInsert = (props: PortableTextInsertProps) => {
                 width={0} 
                 height={0}
                 sizes="100%"
-                style={{ height: '100%', width: '100%', margin: 'auto', objectFit: 'none' }}
+                style={{ height: '100%', width: '100%', margin: 'auto', objectFit: 'cover' }}
                 ></Image>
             )
         }

@@ -6,6 +6,8 @@ import { Gallery, GallerySectionProps } from '@/app/lib/interface';
 import Image from 'next/image';
 import { urlFor } from '@/app/lib/sanityImageUrl';
 import { PortableText } from '@portabletext/react';
+import SwiperTest from '../EmblaCarouselComp';
+import EmblaCarouselComp from '../EmblaCarouselComp';
 import PortableTextInsert from '../PortableTextInsert';
 
 const GallerySection = async (props: GallerySectionProps) => {
@@ -48,6 +50,8 @@ const GallerySection = async (props: GallerySectionProps) => {
                     </div>
                 ))}
             </div>
+
+            <EmblaCarouselComp data={props.data}></EmblaCarouselComp>
         </div>
     );
 }

@@ -73,3 +73,7 @@ export interface BlogSectionProps {
     data?: any;
 }
 
+export interface EmblaCarouselCompProps {
+    data?: any
+}
+

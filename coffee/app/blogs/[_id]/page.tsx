@@ -20,15 +20,16 @@ const BlogPage = async ({params}: any) => {
   const formattedDate = parseISO(blog._createdAt);
 
   return (
-    <div className='px-4 py-14'>
+    <div className='px-4 py-14 md:py-4 bg-green-800'>
       <div>
         <h1 className='text-2xl font-semibold text-yellow-400'>{blog.title}</h1>
         <p>{blog.overview}</p>
+        <div className='py-2'>
+          <p className='text-xs italic'>{format(formattedDate, 'LLLL d, yyyy')}</p>
+        </div>
       </div>
-      <div className='py-2'>
-        <p className='text-xs italic'>{format(formattedDate, 'LLLL d, yyyy')}</p>
-      </div>
-      <div>
+      
+      <div className='bg-blue-900 py-0'>
         <PortableTextInsert value={blog.image}></PortableTextInsert>
       </div>
       <div className='pt-4 text-left'>
