@@ -11,7 +11,7 @@ const Navigation = () => {
     <nav className='bg-gray-900 text-slate-200 p-4 text-left [&>*]:mx-1'>
       <Link href={"/"}>Home</Link>
       <Link href="http://localhost:3333/" target='_blank'>Admin</Link>
-      <Link href="/blogs" target='_blank'>Blogs</Link>
+      <Link href="/blogs">Blogs</Link>
     </nav>
   );
 }

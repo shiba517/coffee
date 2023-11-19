@@ -6,6 +6,7 @@ import { Gallery, GallerySectionProps } from '@/app/lib/interface';
 import Image from 'next/image';
 import { urlFor } from '@/app/lib/sanityImageUrl';
 import { PortableText } from '@portabletext/react';
+import PortableTextInsert from '../PortableTextInsert';
 
 const GallerySection = async (props: GallerySectionProps) => {
     const galleryData = props.data
@@ -39,11 +40,11 @@ const GallerySection = async (props: GallerySectionProps) => {
             <div className='grid grid-cols-3 p-4 gap-2'>
                 {galleryData.map((gallery: Gallery) => (
                     <div key={gallery._id} className='bg-green-400 text-black overflow-hidden aspect-square'>
-                        {/* <p>{new Date(gallery._createdAt).toISOString().split('T')[0] }</p> */}
-                        <PortableText 
+                        {/* <PortableText 
                         value={gallery.image}
                         components={getDataImageValue}
-                        ></PortableText>
+                        ></PortableText> */}
+                        <PortableTextInsert value={gallery.image}></PortableTextInsert>
                     </div>
                 ))}
             </div>

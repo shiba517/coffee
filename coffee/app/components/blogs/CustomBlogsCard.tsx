@@ -2,6 +2,8 @@ import Image from 'next/image';
 import React from 'react';
 import CustomButton from '../CustomButton';
 import { CustomBlogsCardProps } from '@/app/lib/interface';
+import Link from 'next/link';
+import CustomButtonLink from '../CustomButtonLink';
 
 const CustomBlogsCard = (props: CustomBlogsCardProps) => {
   return (
@@ -16,10 +18,11 @@ const CustomBlogsCard = (props: CustomBlogsCardProps) => {
         ></Image>
       <div className='p-2'>
         <h3 className='font-semibold text-lg text-yellow-400 pb-4'>{props.title}</h3>
+        <p  className='line-clamp-4 text-sm text-slate-200'>{props._id}</p>
         <p className='line-clamp-4 text-sm text-slate-200'>{props.overview}</p>
       </div>
       <div className='py-2 pb-6'>
-        <CustomButton title='more' customCss='bg-red-500'></CustomButton>
+        <CustomButtonLink title='read' href={`blogs/${props._id}`} customCss='bg-red-500'></CustomButtonLink>
       </div>
     </div>
   );
